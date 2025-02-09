@@ -1,8 +1,8 @@
-install required pip and run 
-This is just basic model if you want to improve reccomendation change dataset into bigger
+Install required pip and run.
+This is just basic model if you want to improve reccomendation change dataset into bigger with more titles and keywords.
 
 Pre-trained Model Used for this project -
-all-MiniLM-L6-v2
+( all-MiniLM-L6-v2 )
 This is a sentence-transformers model: It maps sentences & paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search.
 
 
