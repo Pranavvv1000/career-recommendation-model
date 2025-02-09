@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Form</title>
+    <style>
+        .question {
+            display: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana;
+            background: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-weight: 700;
+        }
+        
+        form {
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            box-sizing: border-box;
+            color: #e0e0e0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+        
+        .question {
+            display: none;
+            margin-bottom: 20px;
+        }
+        
+        .question label {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        #love1,#love2, select {
+            width: 100%;
+            padding: 14px;
+            font-size: 1em;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background: #2a2a2a;
+            color: #e0e0e0;
+            transition: border-color 0.3s ease;
+        }
+        
+        
+        
+        select {
+            color: #e0e0e0;
+            background: #2a2a2a;
+        }
+        
+        select option {
+            background: #121212;
+            color: #e0e0e0;
+            padding: 10px;
+        }
+        
+        #love1,#love2:focus, select:focus {
+            border-color: #007acc;
+            outline: none;
+        }
+        
+        #navigation {
+            display: flex;
+            justify-content: center;
+        }
+        
+        button {
+            background:  #3403A7FF;
+            color: white;
+            padding: 10px 100px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #0300cd;
+            transform: scale(1.05);
+        }
+        
+        button:disabled {
+            background: #444;
+            cursor: not-allowed;
+        }
+        
+        @media (max-width: 768px) {
+            form {
+                padding: 20px;
+            }
+        
+            textarea, select {
+                font-size: 0.9em;
+            }
+        
+            button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+      /* Ensure the title stays at the top */
+        .title-container {
+        position: absolute;
+        top: 50px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        }
+
+        /* Title Styling */
+        .title {
+        font-size: 2.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: linear-gradient(45deg, #007acc, #030cb5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        }
+
+label{
+    padding-top: 10px;
+}
+        
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">career recommendation MODEL</h1>
+    </div>
+    
+    <form id="questionnaire" action="/" method="POST">
+        <div class="question" id="question1">
+            <label for="q1">Introduce Yourself ! </label>
+            <textarea type="text" name="love1" id="love1"  cols="10" rows="10" placeholder="Tell us about yourself: What are your interests, skills, or career goals? This will help us recommend the best career options for you."></textarea>
+        </div>
+        <div class="question" id="question2">
+            <label for="q2">Enter Your Hobbies ! What do you like to do in free time ?</label>
+            <textarea type="text" name="love2" id="love2"  cols="10" rows="10" placeholder="Enter Your Hobbies (eg. coding,swimming,traveling)"></textarea>
+        </div>
+        <div class="question" id="question3">
+            <label for="work_life_balance">In which Domain You Want Your Career ? </label>
+            <select id="q3" name="q3">
+                <option value="healthcare">Healthcare & Medicine</option>
+                <option value="technology">Technology & Software Development</option>
+                <option value="education">Education & Training</option3
+                <option value="engineering">Engineering & Manufacturing</option>
+                <option value="marketing">Marketing & Advertising</option>
+                <option value="finance">Finance & Accounting</option>
+                <option value="human-resources">Human Resources & Recruitment</option>
+                <option value="law">Law & Legal Services</option>
+                <option value="art-design">Art & Design</option>
+                <option value="sales">Sales & Business Development</option>
+                <option value="construction">Construction & Architecture</option>
+                <option value="science">Science & Research</option>
+                <option value="hospitality">Hospitality & Tourism</option>
+                <option value="real-estate">Real Estate & Property Management</option>
+                <option value="retail">Retail & Customer Service</option>
+                <option value="social-work">Social Work & Counseling</option>
+                <option value="public-relations">Public Relations & Communications</option>
+                <option value="transportation">Transportation & Logistics</option>
+                <option value="environment">Environment & Sustainability</option>
+                <option value="sports">Sports & Fitness</option>
+                <option value="music">Music & Performing Arts</option>
+                <option value="photography">Photography & Videography</option>
+                <option value="food-beverage">Food & Beverage Industry</option>
+                <option value="event-planning">Event Planning & Management</option>
+                <option value="media-journalism">Media & Journalism</option>
+                <option value="cybersecurity">Information Security & Cybersecurity</option>
+                <option value="telecommunications">Telecommunications</option>
+                <option value="nonprofit">Nonprofit & Charity Work</option>
+                <option value="government">Government & Public Services</option>
+                <option value="automotive">Automotive & Aerospace</option>
+                <option value="consumer-goods">Consumer Goods & Product Design</option>
+                <option value="insurance">Insurance & Risk Management</option>
+                <option value="retail-ecommerce">Retail & E-commerce</option>
+                <option value="psychology">Psychology & Mental Health</option>
+                <option value="veterinary">Veterinary Services</option>
+                <option value="fashion">Fashion & Textile Industry</option>
+                <option value="agriculture">Agriculture & Farming</option>
+                <option value="publishing">Publishing & Editing</option>
+                <option value="tourism-travel">Tourism & Travel Services</option>
+                <option value="crafts">Crafts & Handmade Goods</option>
+                <option value="fitness">Fitness & Wellness Coaching</option>
+                <option value="legal-corporate">Legal & Corporate Services</option>
+                <option value="biotechnology">Biotechnology & Pharmaceuticals</option>
+                <option value="supply-chain">Supply Chain & Inventory Management</option>
+                <option value="humanitarian">Humanitarian & Disaster Relief</option>
+                <option value="it-support">Technology Support & IT Services</option>
+                <option value="energy">Energy & Renewable Resources</option>
+                <option value="aerospace">Aerospace & Aviation</option>
+                <option value="military">Military & Defense</option>
+                <option value="digital-media">Digital Media & Content Creation</option></select>
+        </div>
+  
+
+        
+        <div id="navigation">
+            <button type="button" id="nextBtn" onclick="nextQuestion()">NEXT</button>
+            <button type="submit" id="submitBtn" style="display: none;">SUBMIT</button>
+        </div>
+
+
+    </form>
+
+    <script>
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question');
+        
+        function showQuestion(index) {
+            if (index >= 0 && index < questions.length) {
+                questions.forEach((q, i) => {
+                    q.style.display = (i === index) ? 'block' : 'none';
+                });
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion(currentQuestionIndex);
+
+                // Show submit button and hide next button on the last question
+                if (currentQuestionIndex === questions.length - 1) {
+                    document.getElementById('submitBtn').style.display = 'block';
+                    document.getElementById('nextBtn').style.display = 'none';
+                }
+            }
+        }
+
+
+        // Initialize by showing the first question
+        showQuestion(currentQuestionIndex);
+    </script>
+
+</body>
+</html>
+
+
